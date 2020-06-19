@@ -14,6 +14,12 @@
           <h1>Emma's Pizza Parlor</h1>
           <form id="pizza">
             <div class="form-group">
+              <label for="size">Size</label>
+              <p>Choose a size for your pizza</p>
+                <input type="radio" name="size" value="15"><label for="small">Small ($15)</label>
+                <input type="radio" name="size" value="20"><label for="medium">Medium ($20)</label>
+                <input type="radio" name="size" value="25"><label for="large">Large ($25)</label>
+              <div class="form-group">
               <label for="toppings">Toppings</label>
               <p>Two toppings included. Additional toppings are 50 cents each.</p>
                 <input type="checkbox" name="toppings" value="tomato"><label for="toppings">Tomato</label><br>
@@ -29,14 +35,6 @@
                 <input type="checkbox" name="toppings" value="bacon"><label for="toppings">Bacon</label><br>
             </div>
             </div>
-            <div class="form-group">
-              <label for="size">Size</label>
-              <p>Choose a size for your pizza</p>
-              <select class="form-control" id="size">
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-              </select>
               <button class="btn-btn-primary" type="submit">Purchase pizza</button>
             </div>
             <div id="pizzaorder">The total cost of your pizza is <span id="pizzacost"></span></div>

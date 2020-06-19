@@ -1,15 +1,15 @@
-function Pizza(toppings, size) {
-  this.toppings = toppings,
+function Pizza(size) {
+  this.toppings = [],
   this.size = size
 }
 
-Pizza.prototype.priceAdj = function() {
+/*Pizza.prototype.priceAdj = function() {
   let pizzaPrice;
-  if (pizzaPrice = 10) {
+  if (pizzaPrice = 15) {
     if (this.size === "Small") {
-      pizzaPrice -= 1;
+      pizzaPrice -= 5;
     } else if (this.size === "Large") {
-      pizzaPrice += 1;
+      pizzaPrice += 5;
     } else if (this.size === "medium" ) {
       pizzaPrice -= 0;
     }
@@ -29,16 +29,17 @@ Pizza.prototype.priceAdj = function() {
 
   return pizzaPrice;
   
-}
+}*/
 
 $(document).ready(function() {
   $("form#pizza").submit(function(event) {
     event.preventDefault();
-    const inputPizzaSize = $("select#size").val()
-    const inputToppings = $("#toppings").val()
+    const inputPizzaSize = parseInt($("input:radio[name=size]:checked").val());
+    const inputToppings = 
 
-    const freshPizza = new Pizza(inputToppings, inputPizzaSize)
-  ("#pizzacost").text(freshPizza.priceAdj());
+    const freshPizza = new Pizza(inputPizzaSize)
+    console.log(freshPizza);
+  //("#pizzacost").text(freshPizza.priceAdj());
 
   
   });
