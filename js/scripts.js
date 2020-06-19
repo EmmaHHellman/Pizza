@@ -24,11 +24,13 @@ $(document).ready(function() {
       freshPizza.toppings.push($(this).val())
     });
     
-    const cost = freshPizza.priceAdj(freshPizza.toppings)
+    const cost = freshPizza.priceAdj(freshPizza.toppings);
+    $("#pizzaorder").show();
     $("#pizzacost").text(cost);
+    
 
     console.log(freshPizza);
-    console.log(cost)
+    
     
 
   

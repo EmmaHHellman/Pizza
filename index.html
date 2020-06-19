@@ -9,38 +9,60 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h1>Emma's Pizza Parlor</h1>
-          <form id="pizza">
-            <div class="form-group">
-              <label for="size">Size</label>
-              <p>Choose a size for your pizza</p>
-                <input type="radio" name="pizzasize" value="15"><label for="small">Small ($15)</label>
-                <input type="radio" name="pizzasize" value="20"><label for="medium">Medium ($20)</label>
-                <input type="radio" name="pizzasize" value="25"><label for="large">Large ($25)</label>
-              <div class="form-group">
-              <label for="toppings">Toppings</label>
-              <p>Two toppings included. Additional toppings are 50 cents each.</p>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="tomato"><label for="pizzatoppings">Tomato</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="pineapple"><label for="pizzatoppings">Pineapple</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="onion"><label for="pizzatoppings">Onion</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="green peppers"><label for="pizzatoppings">Green Peppers</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="olives"><label for="pizzatoppings">Olives</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="mushrooms"><label for="pizzatoppings">Mushrooms</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="garlic"><label for="pizzatoppings">Garlic</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="pepperoni"><label for="pizzatoppings">Pepperoni</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="sausage"><label for="pizzatoppings">Susage</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="chicken"><label for="pizzatoppings">Chicken</label><br>
-                <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="bacon"><label for="pizzatoppings">Bacon</label><br>
-            </div>
-            </div>
-              <button class="btn-btn-primary" type="submit">Purchase pizza</button>
-            </div>
-            <div id="pizzaorder">The total cost of your pizza is <span id="pizzacost"></span></div>
-          </form>
-        </div>
+      <div class="jumbotron">
+      <h1>Emma's Pizza Parlor</h1>
       </div>
+      <div class="col-md-4">
+        <img src="http://www.takepart.com/sites/default/files/styles/large/public/Pizza-box-chemicals-MAIN.jpg" alt="a picture of a pizza box">
+      </div> 
+      <div class="col-md-4">
+        <img src="https://www.kingarthurflour.com/sites/default/files/recipe_legacy/20-3-large.jpg" alt="a picture of a pizza">
+      </div>
+      <div class="col-md-4">
+        <img src="https://www.evansneighborhoodpizza.com/wp-content/uploads/2019/09/The-Top-10-Most-Popular-Pizza-Toppings-Almost-Everyone-Loves.jpg" alt="a picture of toppings">
+      </div>
+    </div> 
+      <form id="pizza">
+        <div class="form-group">
+          <div class="row"> 
+          <h1>Size</h1>
+          <p>Choose a size for your pizza</p>
+            <input type="radio" name="pizzasize" value="15"><label for="small">Small ($15)</label>
+            <input type="radio" name="pizzasize" value="20"><label for="medium">Medium ($20)</label>
+            <input type="radio" name="pizzasize" value="25"><label for="large">Large ($25)</label>
+          <div class="form-group">
+          <h1>Toppings</h1>
+          <p>Two toppings included. Additional toppings are 50 cents each.</p>
+          <div class="row">
+            <div class="col-md-4">
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="tomato"><label for="pizzatoppings">Tomato</label><br>
+            <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="pineapple"><label for="pizzatoppings">Pineapple</label><br>
+            <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="onion"><label for="pizzatoppings">Onion</label><br>
+            <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="green peppers"><label for="pizzatoppings">Green Peppers</label><br>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="olives"><label for="pizzatoppings">Olives</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="mushrooms"><label for="pizzatoppings">Mushrooms</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="garlic"><label for="pizzatoppings">Garlic</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="pepperoni"><label for="pizzatoppings">Pepperoni</label><br>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="sausage"><label for="pizzatoppings">Susage</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="chicken"><label for="pizzatoppings">Chicken</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="bacon"><label for="pizzatoppings">Bacon</label><br>
+              <input type="checkbox" name="pizzatoppings" class="pizzatoppings" value="corn"><label for="pizzatoppings">Corn</label><br>
+            </div>
+          </div>  
+        </div>
+        </div>
+          <button class="btn-btn-primary" type="submit">Purchase</button>
+        </div>
+        <div class="jumbotron" id="pizzaorder">
+          <h3>The total cost of your pizza is $<span id="pizzacost"></span></h3>
+          <h4>You ordered a <span id="size"></span> with <span id="toppings"></span> toppings</h4> 
+
+        </div>
+      </form>
     </div>
   </body>
 </html>

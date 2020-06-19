@@ -18,9 +18,9 @@ Output: 'Adds a dollar'
 
 Behavior
 
-Returns a price give size selection
+Returns a price given size selection
 Input: 'Input add large size'
-Output: 'Adds a dollar'
+Output: 'Outputs $25'
 
 ## Setup/Installation Requirements
 
