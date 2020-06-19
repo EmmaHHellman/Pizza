@@ -32,7 +32,7 @@ $(document).ready(function() {
       pizzaSize = "Large"
     }
     
-    const cost = freshPizza.priceAdj(freshPizza.toppings);
+    const cost = freshPizza.priceAdj(freshPizza.toppings).toFixed(2);
     $("#pizzaorder").show();
     $("#pizzacost").text(cost);
     
