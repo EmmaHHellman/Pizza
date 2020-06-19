@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
     <title>Emma's Pizza Parlor</title>
@@ -27,9 +29,9 @@
           <div class="row"> 
           <h1>Size</h1>
           <p>Choose a size for your pizza</p>
-            <input type="radio" name="pizzasize" value="15"><label for="small">Small ($15)</label>
-            <input type="radio" name="pizzasize" value="20"><label for="medium">Medium ($20)</label>
-            <input type="radio" name="pizzasize" value="25"><label for="large">Large ($25)</label>
+            <input type="radio" name="pizzasize" class="pizzasize" id="small" value="15"><label for="small">Small ($15)</label>
+            <input type="radio" name="pizzasize" class="pizzasize" id="medium" value="20"><label for="medium">Medium ($20)</label>
+            <input type="radio" name="pizzasize" class="pizzasize" id="large" value="25"><label for="large">Large ($25)</label>
           <div class="form-group">
           <h1>Toppings</h1>
           <p>Two toppings included. Additional toppings are 50 cents each.</p>
@@ -58,9 +60,9 @@
           <button class="btn-btn-primary" type="submit">Purchase</button>
         </div>
         <div class="jumbotron" id="pizzaorder">
+          <i class="fas fa-pizza-slice"></i>
           <h3>The total cost of your pizza is $<span id="pizzacost"></span></h3>
           <h4>You ordered a <span id="size"></span> with <span id="toppings"></span> toppings</h4> 
-
         </div>
       </form>
     </div>

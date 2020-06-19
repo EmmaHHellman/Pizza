@@ -18,21 +18,26 @@ Pizza.prototype.priceAdj = function(toppingSelections) {
 $(document).ready(function() {
   $("form#pizza").submit(function(event) {
     event.preventDefault();
-    const inputPizzaSize = parseInt($("input:radio[name=pizzasize]:checked").val());
+    let inputPizzaSize = parseInt($("input:radio[name=pizzasize]:checked").val());
     const freshPizza = new Pizza(inputPizzaSize);
     $(".pizzatoppings:checked").each(function () {
       freshPizza.toppings.push($(this).val())
     });
+
+    if (inputPizzaSize === 15) {
+      var pizzaSize = "Small"
+    } else if (inputPizzaSize === 20) {
+      pizzaSize = "Medium"
+    } else if (inputPizzaSize === 25) {
+      pizzaSize = "Large"
+    }
     
     const cost = freshPizza.priceAdj(freshPizza.toppings);
     $("#pizzaorder").show();
     $("#pizzacost").text(cost);
     
+    $("#size").text(pizzaSize);
+    $("#toppings").text(freshPizza.toppings.join(", "));
 
-    console.log(freshPizza);
-    
-    
-
-  
   });
 });

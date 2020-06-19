@@ -24,3 +24,12 @@ h1 {
   font-weight: Bold;
   margin-top: 15px;
 }
+
+label {
+  padding: 5px;
+}
+
+.fas {
+  font-weight: 900;
+  font-size: 5rem;
+}
