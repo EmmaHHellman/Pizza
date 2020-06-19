@@ -6,7 +6,7 @@
 
 ## Description
 
-_The website allows users to choose a size of a pizza and the toppings. The website calculates the cost of the pizza based on these two factors._
+_The website allows users to choose a size of a pizza and the toppings. The website calculates the cost of the pizza based on these two factors. You can view the website here https://emmahhellman.github.io/Pizza/_
 
 ## Specifications
 
