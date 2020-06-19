@@ -15,15 +15,15 @@ Pizza.prototype.priceAdj = function() {
     }
   }
 
-  var selectedToppings = $('#toppings').val();
+ const toppingSelect = this.toppings;
 
-  for (let i = 0; i < selectedToppings; i++) {
-    if(selectedToppings[i].length > 2) {
-      if (selectedToppings[i] === true) {
-        pizzaPrice -= .5;
+    for (let i = 0; i < toppingSelect.length; i++) {
+    if(this.toppingSelect[i].length > 2) {
+      if (this.toppingSelect.length[i] === true) {
+        pizzaPrice += .5;
       }
     } else {
-      pizzaPrice -= 0;
+      pizzaPrice += 0;
     }
   }
 
@@ -33,6 +33,13 @@ Pizza.prototype.priceAdj = function() {
 
 $(document).ready(function() {
   $("form#pizza").submit(function(event) {
-  event.preventDefault();
+    event.preventDefault();
+    const inputPizzaSize = $("select#size").val()
+    const inputToppings = $("#toppings").val()
+
+    const freshPizza = new Pizza(inputToppings, inputPizzaSize)
+  ("#pizzacost").text(freshPizza.priceAdj());
+
+  
   });
 });

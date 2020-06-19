@@ -20,7 +20,7 @@ Behavior
 
 Returns a price give size selection
 Input: 'Input add large size'
-Output: "adds a dollar"
+Output: 'Adds a dollar'
 
 ## Setup/Installation Requirements
 
